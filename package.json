@@ -1,0 +1,21 @@
+{
+  "name": "electron-vue-vite",
+  "version": "1.0.0",
+  "main": "dist-electron/main/index.js",
+  "description": "",
+  "author": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && electron-builder",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "electron": "^22.0.3",
+    "electron-builder": "^23.6.0",
+    "vite": "^4.0.4",
+    "vite-plugin-electron": "^0.11.1",
+    "vite-plugin-electron-renderer": "^0.11.4",
+    "vue": "^3.2.45"
+  }
+}
