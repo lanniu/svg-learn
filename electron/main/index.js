@@ -43,16 +43,16 @@ const indexHtml = join(process.env.DIST, 'index.html')
 async function createWindow() {
     win = new BrowserWindow({
         title: 'Main window',
-        width: 1080,
-        height: 720,
+        width: 1920,
+        height: 1080,
         icon: join(process.env.PUBLIC, 'favicon.ico'),
         webPreferences: {
             preload,
             // Warning: Enable nodeIntegration and disable contextIsolation is not secure in production
             // Consider using contextBridge.exposeInMainWorld
             // Read more on https://www.electronjs.org/docs/latest/tutorial/context-isolation
-            nodeIntegration: true,
-            contextIsolation: false,
+            // nodeIntegration: true,
+            // contextIsolation: false,
         },
     })
 

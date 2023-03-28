@@ -1,51 +1,45 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-
-console.log("[App.vue]", `Hello world from Electron ${process.versions.electron}!`)
-</script>
-
 <template>
-  <div>
-    <a href="https://www.electronjs.org/" target="_blank">
-      <img src="./assets/electron.svg" class="logo electron" alt="Electron logo" />
-    </a>
-    <a href="https://vitejs.dev/" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Electron + Vite + Vue" />
-  <div class="flex-center">
-    Place static files into the <code>/public</code> folder
-    <img style="width:5em;" src="/node.svg" alt="Node logo">
+  <div class="common-layout">
+    <el-container>
+      <el-aside class="left">
+        <ul>
+          <li>a</li>
+        </ul>
+      </el-aside>
+      <el-main>
+        <svg-playground/>
+      </el-main>
+      <el-aside class="right">Aside</el-aside>
+    </el-container>
   </div>
 </template>
 
+<script setup>
+import SvgPlayground from './components/svg-playground.vue'
+</script>
+
 <style>
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.common-layout {
+  height: 100%;
+  width: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.common-layout .el-container {
+  height: 100%;
+  width: 100%;
 }
 
-.logo.electron:hover {
-  filter: drop-shadow(0 0 2em #9FEAF9);
+.el-aside .el-main {
+  height: 100%;
+  width: 20%;
+  min-width: 200px;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.el-aside.left {
+  border-right: 1px solid #ebeef5;
 }
 
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.el-aside.right {
+  border-left: 1px solid #ebeef5;
 }
 </style>
