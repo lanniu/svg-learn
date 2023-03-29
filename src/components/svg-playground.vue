@@ -85,6 +85,18 @@ const tagData = ref([
           dur: '10s',
           repeatCount: 'indefinite'
         }
+      },
+      {
+        name: 'animateTransform',
+        attrs: {
+          attributeName: 'transform',
+          attributeType: 'XML',
+          type: 'translate',
+          from: '0 0',
+          to: '-50 0',
+          dur: '10s',
+          repeatCount: 'indefinite'
+        }
       }
     ]
   },
